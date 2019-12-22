@@ -13,9 +13,11 @@
 		67C7C3E623A7A1DE00CEBA08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C7C3E523A7A1DE00CEBA08 /* Assets.xcassets */; };
 		67C7C3E923A7A1DE00CEBA08 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67C7C3E823A7A1DE00CEBA08 /* Preview Assets.xcassets */; };
 		67C7C3EC23A7A1DE00CEBA08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67C7C3EA23A7A1DE00CEBA08 /* LaunchScreen.storyboard */; };
-		67C7C3F823A7A32F00CEBA08 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7C3F723A7A32F00CEBA08 /* SearchBar.swift */; };
 		67C7C41D23A7A7EA00CEBA08 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7C41C23A7A7EA00CEBA08 /* SearchView.swift */; };
 		67C7C42023A7AE0700CEBA08 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7C41F23A7AE0700CEBA08 /* UIApplication+.swift */; };
+		CE6659EB23AE085A000B79B9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6659E923AE085A000B79B9 /* SearchBar.swift */; };
+		CE6659EC23AE085A000B79B9 /* UITextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6659EA23AE085A000B79B9 /* UITextFieldView.swift */; };
+		CE6659EE23AE08A9000B79B9 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6659ED23AE08A9000B79B9 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +29,11 @@
 		67C7C3E823A7A1DE00CEBA08 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67C7C3EB23A7A1DE00CEBA08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67C7C3ED23A7A1DE00CEBA08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		67C7C3F723A7A32F00CEBA08 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		67C7C41C23A7A7EA00CEBA08 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		67C7C41F23A7AE0700CEBA08 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
+		CE6659E923AE085A000B79B9 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CE6659EA23AE085A000B79B9 /* UITextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldView.swift; sourceTree = "<group>"; };
+		CE6659ED23AE08A9000B79B9 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +90,8 @@
 		67C7C41A23A7A7C000CEBA08 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				67C7C3F723A7A32F00CEBA08 /* SearchBar.swift */,
+				CE6659E923AE085A000B79B9 /* SearchBar.swift */,
+				CE6659EA23AE085A000B79B9 /* UITextFieldView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -104,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				67C7C41F23A7AE0700CEBA08 /* UIApplication+.swift */,
+				CE6659ED23AE08A9000B79B9 /* String+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -181,10 +187,12 @@
 			files = (
 				67C7C41D23A7A7EA00CEBA08 /* SearchView.swift in Sources */,
 				67C7C3E023A7A1DB00CEBA08 /* AppDelegate.swift in Sources */,
+				CE6659EE23AE08A9000B79B9 /* String+.swift in Sources */,
+				CE6659EC23AE085A000B79B9 /* UITextFieldView.swift in Sources */,
 				67C7C42023A7AE0700CEBA08 /* UIApplication+.swift in Sources */,
-				67C7C3F823A7A32F00CEBA08 /* SearchBar.swift in Sources */,
 				67C7C3E223A7A1DB00CEBA08 /* SceneDelegate.swift in Sources */,
 				67C7C3E423A7A1DB00CEBA08 /* ContentView.swift in Sources */,
+				CE6659EB23AE085A000B79B9 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,7 +337,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.struuuuggle.SearchBar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SearchBar;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -348,7 +356,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.struuuuggle.SearchBar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SearchBar;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

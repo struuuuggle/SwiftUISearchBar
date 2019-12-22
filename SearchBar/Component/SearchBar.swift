@@ -7,40 +7,54 @@
 //
 
 import SwiftUI
+import Combine
 
+/// A searchBar with a textField which is the first responder
 struct SearchBar: View {
+    @State private var showCancelButton: Bool = false
     
-    @Binding var searchTerm: String
-    @State private var isEditing: Bool = false
-    var placeholder: String?
+    @Binding var text: String
+    let placeholder: String?
+    var onTap: (() -> Void)?
+    var onEdit: (() -> Void)?
+    var onCommit: ((String) -> Void)?
+    var onCancel: (() -> Void)?
     
     var body: some View {
         HStack {
             HStack {
-                Image(systemName: "magnifyingglass").foregroundColor(.secondary)
+                Image(systemName: "magnifyingglass")
                 
-                TextField(self.placeholder ?? "", text: $searchTerm, onEditingChanged: { isChanged in
-                    self.isEditing = isChanged
-                }, onCommit: {
-                    print("onCommit")
-                })
+                UITextFieldView(text: $text, placeholder: placeholder, onTap: {
+                    self.onTap?()
+                }, onEdit: { (isChanged) in
+                    self.showCancelButton = isChanged
+                    self.onEdit?()
+                }, onCommit: { textFieldText in
+                    self.text = textFieldText
+                    self.onCommit?(textFieldText)
+                }).foregroundColor(.primary)
             }
-            .frame(height: 32)
-            .background(Color.init(.systemGray6))
-            .cornerRadius(5)
+            .padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
+            .foregroundColor(.secondary)
+            .background(Color(.secondarySystemBackground))
+            .cornerRadius(10.0)
+            .padding(.vertical, 10)
             
-            if isEditing {
+            if showCancelButton {
                 Button("Cancel") {
-                    self.clearSearchResults()
-                    UIApplication.shared.endEditing()
+                    self.onTapCancelButton()
                 }
             }
         }
+        .padding(.horizontal)
     }
 }
 
 extension SearchBar {
-    private func clearSearchResults() {
-        self.searchTerm = ""
+    private func onTapCancelButton() {
+        self.onCancel?()
+        self.text.clear()
+        self.showCancelButton = false
     }
 }
