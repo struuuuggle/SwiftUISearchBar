@@ -7,6 +7,7 @@
 //
 
 extension String {
+    /// Clears its own string value.
     public mutating func clear() {
         self = ""
     }

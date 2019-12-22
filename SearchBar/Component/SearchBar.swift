@@ -6,28 +6,28 @@
 //  Copyright © 2019 Mikiya Abe. All rights reserved.
 //
 
-import SwiftUI
 import Combine
+import SwiftUI
 
 /// A searchBar with a textField which is the first responder
 struct SearchBar: View {
     @State private var showCancelButton: Bool = false
-    
+
     @Binding var text: String
     let placeholder: String?
     var onTap: (() -> Void)?
     var onEdit: (() -> Void)?
     var onCommit: ((String) -> Void)?
     var onCancel: (() -> Void)?
-    
+
     var body: some View {
         HStack {
             HStack {
                 Image(systemName: "magnifyingglass")
-                
+
                 UITextFieldView(text: $text, placeholder: placeholder, onTap: {
                     self.onTap?()
-                }, onEdit: { (isChanged) in
+                }, onEdit: { isChanged in
                     self.showCancelButton = isChanged
                     self.onEdit?()
                 }, onCommit: { textFieldText in
@@ -40,7 +40,7 @@ struct SearchBar: View {
             .background(Color(.secondarySystemBackground))
             .cornerRadius(10.0)
             .padding(.vertical, 10)
-            
+
             if showCancelButton {
                 Button("Cancel") {
                     self.onTapCancelButton()

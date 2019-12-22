@@ -1,5 +1,5 @@
-import UIKit
 import SwiftUI
+import UIKit
 
 struct UITextFieldView: UIViewRepresentable {
     typealias UIViewType = UITextField
@@ -22,7 +22,7 @@ struct UITextFieldView: UIViewRepresentable {
             textField.onCommit = onCommit
             return textField
         }()
-        
+
         // 検索した後に、他の画面に遷移し、もう一度検索画面に戻ってきたときはキーボードを表示しない
         if $text.wrappedValue.isEmpty {
             print("textField is empty so the keyboard will be shown.")
@@ -42,11 +42,11 @@ class WrappableTextField: UITextField, UITextFieldDelegate {
     var onTap: (() -> Void)?
     var onEdit: ((Bool) -> Void)?
     var onCommit: ((String) -> Void)?
-    
+
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         onTap?()
     }
-    
+
     func textFieldDidBeginEditing(_ textField: UITextField) {
         onEdit?(true)
     }
