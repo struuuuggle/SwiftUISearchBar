@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		67C70B7723BF340A00B8CDFC /* SwiftUISearchBar in Frameworks */ = {isa = PBXBuildFile; productRef = 67C70B7623BF340A00B8CDFC /* SwiftUISearchBar */; };
 		67C7C3E023A7A1DB00CEBA08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7C3DF23A7A1DB00CEBA08 /* AppDelegate.swift */; };
 		67C7C3E223A7A1DB00CEBA08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7C3E123A7A1DB00CEBA08 /* SceneDelegate.swift */; };
 		67C7C3E423A7A1DB00CEBA08 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7C3E323A7A1DB00CEBA08 /* ContentView.swift */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67C70B7723BF340A00B8CDFC /* SwiftUISearchBar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +116,9 @@
 			dependencies = (
 			);
 			name = SwiftUISearchBarDemo;
+			packageProductDependencies = (
+				67C70B7623BF340A00B8CDFC /* SwiftUISearchBar */,
+			);
 			productName = SearchBar;
 			productReference = 67C7C3DC23A7A1DB00CEBA08 /* SwiftUISearchBarDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +147,9 @@
 				Base,
 			);
 			mainGroup = 67C7C3D323A7A1DB00CEBA08;
+			packageReferences = (
+				67C70B7523BF340A00B8CDFC /* XCRemoteSwiftPackageReference "SwiftUISearchBar" */,
+			);
 			productRefGroup = 67C7C3DD23A7A1DB00CEBA08 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -385,6 +393,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		67C70B7523BF340A00B8CDFC /* XCRemoteSwiftPackageReference "SwiftUISearchBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/struuuuggle/SwiftUISearchBar";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		67C70B7623BF340A00B8CDFC /* SwiftUISearchBar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67C70B7523BF340A00B8CDFC /* XCRemoteSwiftPackageReference "SwiftUISearchBar" */;
+			productName = SwiftUISearchBar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 67C7C3D423A7A1DB00CEBA08 /* Project object */;
 }

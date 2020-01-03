@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import SwiftUISearchBar
 
 struct SearchView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
