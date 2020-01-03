@@ -27,7 +27,7 @@ struct SearchView: View {
 
     var body: some View {
         VStack {
-            SearchBar(text: $searchTerm, placeholder: "Search for people", onCancel: {
+            SwiftUISearchBar(text: $searchTerm, placeholder: "Search for people", onCancel: {
                 self.presentationMode.wrappedValue.dismiss()
             })
 

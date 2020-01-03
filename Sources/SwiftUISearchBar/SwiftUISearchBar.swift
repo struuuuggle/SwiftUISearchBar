@@ -1,8 +1,8 @@
 //
-//  SearchBar.swift
-//  SearchBar
+//  SwiftUISearchBar.swift
+//  SwiftUISearchBar
 //
-//  Created by Mikiya Abe on 2019/12/16.
+//  Created by Mikiya Abe on 2020/1/3.
 //  Copyright © 2019 Mikiya Abe. All rights reserved.
 //
 
@@ -10,17 +10,17 @@ import Combine
 import SwiftUI
 
 /// A searchBar with a textField which is the first responder
-struct SearchBar: View {
+public struct SwiftUISearchBar: View {
     @State private var showCancelButton: Bool = false
 
-    @Binding var text: String
-    let placeholder: String?
-    var onTap: (() -> Void)?
-    var onEdit: (() -> Void)?
-    var onCommit: ((String) -> Void)?
-    var onCancel: (() -> Void)?
+    @Binding public var text: String
+    public let placeholder: String?
+    public var onTap: (() -> Void)?
+    public var onEdit: (() -> Void)?
+    public var onCommit: ((String) -> Void)?
+    public var onCancel: (() -> Void)?
 
-    var body: some View {
+    public var body: some View {
         HStack {
             HStack {
                 Image(systemName: "magnifyingglass")
@@ -49,9 +49,7 @@ struct SearchBar: View {
         }
         .padding(.horizontal)
     }
-}
 
-extension SearchBar {
     private func onTapCancelButton() {
         self.onCancel?()
         self.text = ""

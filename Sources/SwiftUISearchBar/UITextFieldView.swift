@@ -1,3 +1,11 @@
+//
+//  UITextFieldView.swift
+//  SwiftUISearchBar
+//
+//  Created by Mikiya Abe on 2020/1/3.
+//  Copyright © 2019 Mikiya Abe. All rights reserved.
+//
+
 import SwiftUI
 import UIKit
 
