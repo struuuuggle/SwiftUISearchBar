@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "67C7C3DB23A7A1DB00CEBA08"
-               BuildableName = "SearchBar.app"
-               BlueprintName = "SearchBar"
-               ReferencedContainer = "container:SearchBar.xcodeproj">
+               BuildableName = "SwiftUI-SearchBar.app"
+               BlueprintName = "SwiftUI-SearchBar"
+               ReferencedContainer = "container:SwiftUI-SearchBar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "67C7C3DB23A7A1DB00CEBA08"
-            BuildableName = "SearchBar.app"
-            BlueprintName = "SearchBar"
-            ReferencedContainer = "container:SearchBar.xcodeproj">
+            BuildableName = "SwiftUI-SearchBar.app"
+            BlueprintName = "SwiftUI-SearchBar"
+            ReferencedContainer = "container:SwiftUI-SearchBar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "67C7C3DB23A7A1DB00CEBA08"
-            BuildableName = "SearchBar.app"
-            BlueprintName = "SearchBar"
-            ReferencedContainer = "container:SearchBar.xcodeproj">
+            BuildableName = "SwiftUI-SearchBar.app"
+            BlueprintName = "SwiftUI-SearchBar"
+            ReferencedContainer = "container:SwiftUI-SearchBar.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

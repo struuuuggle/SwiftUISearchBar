@@ -17,11 +17,10 @@
 		67C7C42023A7AE0700CEBA08 /* UIApplication+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C7C41F23A7AE0700CEBA08 /* UIApplication+.swift */; };
 		CE6659EB23AE085A000B79B9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6659E923AE085A000B79B9 /* SearchBar.swift */; };
 		CE6659EC23AE085A000B79B9 /* UITextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6659EA23AE085A000B79B9 /* UITextFieldView.swift */; };
-		CE6659EE23AE08A9000B79B9 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6659ED23AE08A9000B79B9 /* String+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		67C7C3DC23A7A1DB00CEBA08 /* SearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		67C7C3DC23A7A1DB00CEBA08 /* SwiftUI-SearchBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-SearchBar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		67C7C3DF23A7A1DB00CEBA08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67C7C3E123A7A1DB00CEBA08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		67C7C3E323A7A1DB00CEBA08 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,7 +32,6 @@
 		67C7C41F23A7AE0700CEBA08 /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		CE6659E923AE085A000B79B9 /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE6659EA23AE085A000B79B9 /* UITextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldView.swift; sourceTree = "<group>"; };
-		CE6659ED23AE08A9000B79B9 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +48,7 @@
 		67C7C3D323A7A1DB00CEBA08 = {
 			isa = PBXGroup;
 			children = (
-				67C7C3DE23A7A1DB00CEBA08 /* SearchBar */,
+				67C7C3DE23A7A1DB00CEBA08 /* SwiftUI-SearchBar */,
 				67C7C3DD23A7A1DB00CEBA08 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -58,12 +56,12 @@
 		67C7C3DD23A7A1DB00CEBA08 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				67C7C3DC23A7A1DB00CEBA08 /* SearchBar.app */,
+				67C7C3DC23A7A1DB00CEBA08 /* SwiftUI-SearchBar.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		67C7C3DE23A7A1DB00CEBA08 /* SearchBar */ = {
+		67C7C3DE23A7A1DB00CEBA08 /* SwiftUI-SearchBar */ = {
 			isa = PBXGroup;
 			children = (
 				67C7C3DF23A7A1DB00CEBA08 /* AppDelegate.swift */,
@@ -76,7 +74,7 @@
 				67C7C3ED23A7A1DE00CEBA08 /* Info.plist */,
 				67C7C3E723A7A1DE00CEBA08 /* Preview Content */,
 			);
-			path = SearchBar;
+			path = "SwiftUI-SearchBar";
 			sourceTree = "<group>";
 		};
 		67C7C3E723A7A1DE00CEBA08 /* Preview Content */ = {
@@ -109,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				67C7C41F23A7AE0700CEBA08 /* UIApplication+.swift */,
-				CE6659ED23AE08A9000B79B9 /* String+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -117,9 +114,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		67C7C3DB23A7A1DB00CEBA08 /* SearchBar */ = {
+		67C7C3DB23A7A1DB00CEBA08 /* SwiftUI-SearchBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 67C7C3F023A7A1DE00CEBA08 /* Build configuration list for PBXNativeTarget "SearchBar" */;
+			buildConfigurationList = 67C7C3F023A7A1DE00CEBA08 /* Build configuration list for PBXNativeTarget "SwiftUI-SearchBar" */;
 			buildPhases = (
 				67C7C3D823A7A1DB00CEBA08 /* Sources */,
 				67C7C3D923A7A1DB00CEBA08 /* Frameworks */,
@@ -130,9 +127,9 @@
 			);
 			dependencies = (
 			);
-			name = SearchBar;
+			name = "SwiftUI-SearchBar";
 			productName = SearchBar;
-			productReference = 67C7C3DC23A7A1DB00CEBA08 /* SearchBar.app */;
+			productReference = 67C7C3DC23A7A1DB00CEBA08 /* SwiftUI-SearchBar.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -150,7 +147,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 67C7C3D723A7A1DB00CEBA08 /* Build configuration list for PBXProject "SearchBar" */;
+			buildConfigurationList = 67C7C3D723A7A1DB00CEBA08 /* Build configuration list for PBXProject "SwiftUI-SearchBar" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -163,7 +160,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				67C7C3DB23A7A1DB00CEBA08 /* SearchBar */,
+				67C7C3DB23A7A1DB00CEBA08 /* SwiftUI-SearchBar */,
 			);
 		};
 /* End PBXProject section */
@@ -208,7 +205,6 @@
 			files = (
 				67C7C41D23A7A7EA00CEBA08 /* SearchView.swift in Sources */,
 				67C7C3E023A7A1DB00CEBA08 /* AppDelegate.swift in Sources */,
-				CE6659EE23AE08A9000B79B9 /* String+.swift in Sources */,
 				CE6659EC23AE085A000B79B9 /* UITextFieldView.swift in Sources */,
 				67C7C42023A7AE0700CEBA08 /* UIApplication+.swift in Sources */,
 				67C7C3E223A7A1DB00CEBA08 /* SceneDelegate.swift in Sources */,
@@ -358,7 +354,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.struuuuggle.SearchBar;
-				PRODUCT_NAME = SearchBar;
+				PRODUCT_NAME = "SwiftUI-SearchBar";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -377,7 +373,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.struuuuggle.SearchBar;
-				PRODUCT_NAME = SearchBar;
+				PRODUCT_NAME = "SwiftUI-SearchBar";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -386,7 +382,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		67C7C3D723A7A1DB00CEBA08 /* Build configuration list for PBXProject "SearchBar" */ = {
+		67C7C3D723A7A1DB00CEBA08 /* Build configuration list for PBXProject "SwiftUI-SearchBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67C7C3EE23A7A1DE00CEBA08 /* Debug */,
@@ -395,7 +391,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		67C7C3F023A7A1DE00CEBA08 /* Build configuration list for PBXNativeTarget "SearchBar" */ = {
+		67C7C3F023A7A1DE00CEBA08 /* Build configuration list for PBXNativeTarget "SwiftUI-SearchBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				67C7C3F123A7A1DE00CEBA08 /* Debug */,

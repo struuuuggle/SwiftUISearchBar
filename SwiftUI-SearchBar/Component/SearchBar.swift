@@ -54,7 +54,7 @@ struct SearchBar: View {
 extension SearchBar {
     private func onTapCancelButton() {
         self.onCancel?()
-        self.text.clear()
+        self.text = ""
         self.showCancelButton = false
     }
 }
