@@ -40,13 +40,13 @@ public struct SwiftUISearchBar: View {
                 Image(systemName: "magnifyingglass")
 
                 UITextFieldView(text: $text, placeholder: placeholder, onTap: {
-                    self.onTap?()
+                    onTap?()
                 }, onEdit: { isChanged in
-                    self.showCancelButton = isChanged
-                    self.onEdit?()
+                    showCancelButton = isChanged
+                    onEdit?()
                 }, onCommit: { textFieldText in
-                    self.text = textFieldText
-                    self.onCommit?(textFieldText)
+                    text = textFieldText
+                    onCommit?(textFieldText)
                 }).foregroundColor(.primary)
             }
             .padding(.init(top: 8, leading: 6, bottom: 8, trailing: 6))
@@ -57,7 +57,7 @@ public struct SwiftUISearchBar: View {
 
             if showCancelButton {
                 Button("Cancel") {
-                    self.onTapCancelButton()
+                    onTapCancelButton()
                 }
 
             }
@@ -66,9 +66,9 @@ public struct SwiftUISearchBar: View {
     }
 
     private func onTapCancelButton() {
-        self.onCancel?()
-        self.text = ""
-        self.showCancelButton = false
-        self.hideKeyboard()
+        onCancel?()
+        text = ""
+        showCancelButton = false
+        hideKeyboard()
     }
 }
