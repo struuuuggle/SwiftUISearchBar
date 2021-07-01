@@ -10,19 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView {
-            VStack {
-                NavigationLink(destination: SearchView()) {
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                        Text("Tap me to search people!")
-                    }
-                    .accessibility(label: Text("Go to Search Page"))
-                }
-                .navigationBarTitle("")
-                .navigationBarHidden(true)
-            }
-        }
+        SearchView()
     }
 }
 
