@@ -33,7 +33,6 @@ struct UITextFieldView: UIViewRepresentable {
 
         // 検索した後に、他の画面に遷移し、もう一度検索画面に戻ってきたときはキーボードを表示しない
         if $text.wrappedValue.isEmpty {
-            print("textField is empty so the keyboard will be shown.")
             textField.becomeFirstResponder()
         }
         return textField
