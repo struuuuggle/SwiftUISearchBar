@@ -66,4 +66,8 @@ class WrappableTextField: UITextField, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         onCommit?(textField.text ?? "")
     }
+
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        return true
+    }
 }
