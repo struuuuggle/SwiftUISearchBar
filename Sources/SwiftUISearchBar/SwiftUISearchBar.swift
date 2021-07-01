@@ -49,7 +49,7 @@ public struct SwiftUISearchBar: View {
                     self.onCommit?(textFieldText)
                 }).foregroundColor(.primary)
             }
-            .padding(EdgeInsets(top: 8, leading: 6, bottom: 8, trailing: 6))
+            .padding(.init(top: 8, leading: 6, bottom: 8, trailing: 6))
             .foregroundColor(.secondary)
             .background(Color(.secondarySystemBackground))
             .cornerRadius(10.0)
@@ -59,6 +59,7 @@ public struct SwiftUISearchBar: View {
                 Button("Cancel") {
                     self.onTapCancelButton()
                 }
+
             }
         }
         .padding(.horizontal)
@@ -68,5 +69,6 @@ public struct SwiftUISearchBar: View {
         self.onCancel?()
         self.text = ""
         self.showCancelButton = false
+        self.hideKeyboard()
     }
 }
