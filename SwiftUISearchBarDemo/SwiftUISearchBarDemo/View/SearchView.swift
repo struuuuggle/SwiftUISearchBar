@@ -28,17 +28,29 @@ struct SearchView: View {
 
     var body: some View {
         VStack {
-            SwiftUISearchBar(text: $searchTerm, placeholder: "Search for people", onCancel: {
-                self.presentationMode.wrappedValue.dismiss()
-            })
+            SwiftUISearchBar(
+                text: $searchTerm,
+                placeholder: "Search for people",
+                onCancel: {
+                    // do nothing
+                }
+            )
 
-            if self.people.contains { $0.localizedStandardContains(self.searchTerm) } {
+            if searchTerm.isEmpty {
+                Text("Type some")
+                Spacer()
+            } else if people.contains { $0.localizedStandardContains(self.searchTerm) } {
                 List {
-                    ForEach(self.people.filter { $0.localizedStandardContains(self.searchTerm) }, id: \.self) { person in
+                    ForEach(
+                        people.filter { $0.localizedStandardContains(self.searchTerm) },
+                        id: \.self
+                    ) { person in
                         Text(person)
                     }
                 }
             } else {
+                Spacer()
+                Text("Not found")
                 Spacer()
             }
         }
